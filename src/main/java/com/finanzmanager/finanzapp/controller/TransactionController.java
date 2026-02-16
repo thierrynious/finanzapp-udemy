@@ -1,8 +1,11 @@
 package com.finanzmanager.finanzapp.controller;
 
+import com.finanzmanager.finanzapp.dto.TransactionDTO;
 import com.finanzmanager.finanzapp.model.Transaction;
 import com.finanzmanager.finanzapp.service.TransactionService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,28 +23,59 @@ public class TransactionController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Transaction>> getAllTransactions() {
-        List<Transaction> transactions = service.getAll();
-        return ResponseEntity.ok(transactions);
+    public ResponseEntity<List<TransactionDTO>> getAllTransactions() {
+        List<TransactionDTO> result = service.getAll()
+                .stream()
+                .map(this::toDTO)
+                .toList();
+        return ResponseEntity.ok(result);
     }
 
     @PostMapping
-    public ResponseEntity<?> createTransaction(@Valid @RequestBody Transaction transaction) {
-        if(transaction.getId() != null) {
-            return ResponseEntity.badRequest().body("Id muss null sein - Wird automatisch generiert");
-        }
-        Transaction saved = service.save(transaction);
-        return ResponseEntity.created(URI.create("/api/transactions/"+saved.getId())).body(saved);
+    public ResponseEntity<TransactionDTO> createTransaction(@Valid @RequestBody TransactionDTO dto) {
+        Transaction entity = toEntity(dto);
+        Transaction saved = service.save(entity);
+
+        return ResponseEntity.created(URI.create("/api/transactions/" + saved.getId())).body(toDTO(saved));
     }
 
     @GetMapping("/{id}")
-    public Transaction getById(@PathVariable long id) {
-        return service.getById(id);
+    public TransactionDTO getById(@PathVariable long id) {
+        return toDTO(service.getById(id));
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<Transaction>> searchByTitle(@RequestParam String title) {
-        List<Transaction> results = service.searchByTitle(title);
-        return ResponseEntity.ok(results);
+    public ResponseEntity<List<TransactionDTO>> searchByTitle(@RequestParam String title) {
+        List<TransactionDTO> result = service.searchByTitle(title)
+                .stream()
+                .map(this::toDTO)
+                .toList();
+        return ResponseEntity.ok(result);
+    }
+
+    //Entity - DTO
+    private TransactionDTO toDTO(Transaction tx) {
+        TransactionDTO dto = new TransactionDTO();
+        dto.setId(tx.getId());
+        dto.setTitle(tx.getTitle());
+        dto.setAmount(tx.getAmount());
+        dto.setDate(tx.getDate());
+        return dto;
+    }
+
+    //DTO - Entity
+    private Transaction toEntity(TransactionDTO dto) {
+        return new Transaction(
+                dto.getTitle(),
+                dto.getAmount(),
+                dto.getDate()
+        );
+    }
+
+    @GetMapping("/paged")
+    public ResponseEntity<Page<TransactionDTO>> getPagedTransactions(Pageable pageable) {
+        Page<TransactionDTO> result = service.getPaged(pageable)
+                .map(this::toDTO);
+        return ResponseEntity.ok(result);
     }
 }

@@ -5,6 +5,7 @@ import com.finanzmanager.finanzapp.repository.UserRepository;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
@@ -18,23 +19,22 @@ public class UserService {
     private static final Logger log = LoggerFactory.getLogger(UserService.class);
 
     private final UserRepository userRepository;
-    public UserService(UserRepository userRepository) {
+    private final PasswordEncoder passwordEncoder;
+
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public User register(@Valid User user) {
 
-        log.info("Starte registrierung für User:{}", user.getUsername());
-
         user.setCreatedAt(LocalDateTime.now());
         user.setUpdatedAt(LocalDateTime.now());
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
 
-        User saved = userRepository.save(user);
-
-        log.info("User erfolgreich registrert mit ID {}",saved.getId());
-
-        return saved;
+        return userRepository.save(user);
     }
+
 
     public Optional<User> getUserByUsername(String username) {
         return userRepository.findByUsername(username);

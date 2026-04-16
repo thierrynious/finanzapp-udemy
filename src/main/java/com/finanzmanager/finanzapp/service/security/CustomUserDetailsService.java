@@ -2,31 +2,27 @@ package com.finanzmanager.finanzapp.service.security;
 
 import com.finanzmanager.finanzapp.model.User;
 import com.finanzmanager.finanzapp.repository.UserRepository;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
-    private final UserRepository repository;
+    private final UserRepository userRepository;
 
-    public CustomUserDetailsService(UserRepository repository) {
-        this.repository = repository;
+    public CustomUserDetailsService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
-        User user = repository.findByUsername(username)
-                .orElseThrow(()-> new UsernameNotFoundException("User not found with username: " + username));
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("Benutzer nicht gefunden: " + email));
 
         return org.springframework.security.core.userdetails.User
-                .withUsername(user.getUsername())
+                .withUsername(user.getEmail())
                 .password(user.getPassword())
-                .roles("USER")
+                .authorities("USER")
                 .build();
     }
-
 }

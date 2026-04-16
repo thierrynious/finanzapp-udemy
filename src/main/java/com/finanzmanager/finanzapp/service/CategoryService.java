@@ -3,45 +3,65 @@ package com.finanzmanager.finanzapp.service;
 import com.finanzmanager.finanzapp.exception.CategoryNotFoundException;
 import com.finanzmanager.finanzapp.model.Category;
 import com.finanzmanager.finanzapp.model.CategoryType;
+import com.finanzmanager.finanzapp.model.User;
 import com.finanzmanager.finanzapp.repository.CategoryRepository;
+import com.finanzmanager.finanzapp.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class CategoryService {
 
     private final CategoryRepository categoryRepository;
+    private final UserRepository userRepository;
 
-    public CategoryService(CategoryRepository categoryRepository) {
-        this.categoryRepository = categoryRepository;
+    private User getCurrentUser() {
+        String email = SecurityContextHolder.getContext().getAuthentication().getName();
+
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Benutzer nicht gefunden"));
     }
-    //create
+
     public Category createCategory(Category category) {
+        User user = getCurrentUser();
+
+        boolean exists = categoryRepository.existsByUserAndNameIgnoreCaseAndType(
+                user,
+                category.getName(),
+                category.getType()
+        );
+
+        if (exists) {
+            throw new RuntimeException("Diese Kategorie existiert bereits");
+        }
+
+        category.setUser(user);
         return categoryRepository.save(category);
     }
-    //Read alle
+
     public List<Category> getAllCategories() {
-        return categoryRepository.findAll();
+        return categoryRepository.findByUser(getCurrentUser());
     }
 
-    // read nach id
     public Category getCategoryById(Long id) {
-        return categoryRepository
-                .findById(id).orElseThrow(()->new CategoryNotFoundException(id));
+        User user = getCurrentUser();
+
+        return categoryRepository.findByIdAndUser(id, user)
+                .orElseThrow(() -> new CategoryNotFoundException(id));
     }
 
-    // get by type
     public List<Category> getByType(CategoryType type) {
-        return categoryRepository.findByType(type);
+        return categoryRepository.findByUserAndType(getCurrentUser(), type);
     }
 
-    // search by name
     public List<Category> searchByName(String keyword) {
-        return categoryRepository.searchByName(keyword);
+        return categoryRepository.findByUserAndNameContainingIgnoreCase(getCurrentUser(), keyword);
     }
 
-    //update
     public Category updateCategory(Long id, Category updatedCategory) {
         Category existingCategory = getCategoryById(id);
 
@@ -51,11 +71,8 @@ public class CategoryService {
         return categoryRepository.save(existingCategory);
     }
 
-    //delete
     public void deleteCategory(Long id) {
-        if (!categoryRepository.existsById(id)) {
-            throw new CategoryNotFoundException(id);
-        }
-        categoryRepository.deleteById(id);
+        Category category = getCategoryById(id);
+        categoryRepository.delete(category);
     }
 }

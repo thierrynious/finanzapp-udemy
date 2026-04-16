@@ -2,21 +2,23 @@ package com.finanzmanager.finanzapp.repository;
 
 import com.finanzmanager.finanzapp.model.Category;
 import com.finanzmanager.finanzapp.model.CategoryType;
+import com.finanzmanager.finanzapp.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
-    //Query-Methode
-    List<Category> findByType(CategoryType type);
+    List<Category> findByUser(User user);
 
-    //Query mit JPQL
-    @Query("select c from Category c where c.name like %:keyword%")
-    List<Category> searchByName(@Param("keyword") String keyword);
+    Optional<Category> findByIdAndUser(Long id, User user);
 
+    List<Category> findByUserAndType(User user, CategoryType type);
+
+    List<Category> findByUserAndNameContainingIgnoreCase(User user, String keyword);
+
+    boolean existsByUserAndNameIgnoreCaseAndType(User user, String name, CategoryType type);
 }

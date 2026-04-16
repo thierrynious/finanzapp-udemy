@@ -19,45 +19,42 @@ public class CategoryController {
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
-    //create
+
     @PostMapping
     public ResponseEntity<Category> createCategory(@Valid @RequestBody Category category) {
-
         Category savedCategory = categoryService.createCategory(category);
         return new ResponseEntity<>(savedCategory, HttpStatus.CREATED);
     }
-    //read alle
+
     @GetMapping
     public ResponseEntity<List<Category>> getAllCategories() {
         return ResponseEntity.ok(categoryService.getAllCategories());
     }
 
-    //read nach id
     @GetMapping("/{id}")
-    public Category getCategoryById(@PathVariable Long id) {
-        return categoryService.getCategoryById(id);
+    public ResponseEntity<Category> getCategoryById(@PathVariable Long id) {
+        return ResponseEntity.ok(categoryService.getCategoryById(id));
     }
 
-    // Nach Type
     @GetMapping("/type/{type}")
-    public List<Category>getByType(@PathVariable CategoryType type) {
-        return categoryService.getByType(type);
+    public ResponseEntity<List<Category>> getByType(@PathVariable CategoryType type) {
+        return ResponseEntity.ok(categoryService.getByType(type));
     }
 
-    //Nach Name
     @GetMapping("/search")
-    public List<Category> searchByName(@RequestParam String name) {
-        return categoryService.searchByName(name);
+    public ResponseEntity<List<Category>> searchByName(@RequestParam String name) {
+        return ResponseEntity.ok(categoryService.searchByName(name));
     }
-    
-    // update
+
     @PutMapping("/{id}")
-    public ResponseEntity<Category> updateCategory(@PathVariable Long id, @Valid @RequestBody Category category) {
+    public ResponseEntity<Category> updateCategory(
+            @PathVariable Long id,
+            @Valid @RequestBody Category category
+    ) {
         Category updatedCategory = categoryService.updateCategory(id, category);
         return ResponseEntity.ok(updatedCategory);
     }
 
-    // delete
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCategory(@PathVariable Long id) {
         categoryService.deleteCategory(id);

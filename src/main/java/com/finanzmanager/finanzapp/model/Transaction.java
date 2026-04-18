@@ -5,8 +5,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
-import jakarta.validation.constraints.Positive;
-import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -44,7 +42,6 @@ public class Transaction {
     @NotBlank(message = "Titel darf nicht leer sein")
     private String title;
 
-    @Positive(message = "Betrag muss positiv sein")
     private double amount;
 
     @NotNull(message = "Datum darf nicht null sein")
@@ -53,12 +50,13 @@ public class Transaction {
     private LocalDate date;
 
     @CreatedDate
-    @Column(nullable=false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
-
-
+    public boolean isIncome() {
+        return amount >= 0;
+    }
 }

@@ -28,13 +28,22 @@ public class UserService {
 
     public User register(@Valid User user) {
 
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new RuntimeException("Diese E-Mail ist bereits vergeben.");
+        }
+
+        if (userRepository.existsByUsername(user.getUsername())) {
+            throw new RuntimeException("Dieser Username ist bereits vergeben.");
+        }
+
+        user.setEmail(user.getEmail().trim().toLowerCase());
+        user.setUsername(user.getUsername().trim());
         user.setCreatedAt(LocalDateTime.now());
         user.setUpdatedAt(LocalDateTime.now());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         return userRepository.save(user);
     }
-
 
     public Optional<User> getUserByUsername(String username) {
         return userRepository.findByUsername(username);

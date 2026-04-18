@@ -27,27 +27,21 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getServletPath();
+
+        return HttpMethod.OPTIONS.matches(request.getMethod())
+                || "/api/auth/login".equals(path)
+                || "/api/users".equals(path)
+                || path.startsWith("/h2-console");
+    }
+
+    @Override
     protected void doFilterInternal(
             HttpServletRequest request,
             HttpServletResponse response,
             FilterChain filterChain
     ) throws ServletException, IOException {
-
-        String path = request.getServletPath();
-
-        // Preflight Requests für CORS durchlassen
-        if (HttpMethod.OPTIONS.matches(request.getMethod())) {
-            filterChain.doFilter(request, response);
-            return;
-        }
-
-        // Öffentliche Endpunkte NICHT filtern
-        if (path.startsWith("/api/auth")
-                || path.startsWith("/api/users")
-                || path.startsWith("/h2-console")) {
-            filterChain.doFilter(request, response);
-            return;
-        }
 
         String header = request.getHeader("Authorization");
 
@@ -61,9 +55,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         try {
             String username = jwtService.extractUsername(token);
 
-            if (username != null
-                    && SecurityContextHolder.getContext().getAuthentication() == null) {
-
+            if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
                 UsernamePasswordAuthenticationToken authToken =

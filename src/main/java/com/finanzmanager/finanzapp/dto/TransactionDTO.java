@@ -11,5 +11,5 @@ public class TransactionDTO {
     private String title;
     private double amount;
     private LocalDate date;
-
+    private boolean income;
 }

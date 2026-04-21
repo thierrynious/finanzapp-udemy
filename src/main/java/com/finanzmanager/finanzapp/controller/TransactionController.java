@@ -5,7 +5,9 @@ import com.finanzmanager.finanzapp.model.Transaction;
 import com.finanzmanager.finanzapp.service.TransactionService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,11 +27,22 @@ public class TransactionController {
     }
 
     @GetMapping
-    public ResponseEntity<List<TransactionDTO>> getAllTransactions() {
-        List<TransactionDTO> result = service.getAll()
-                .stream()
-                .map(this::toDTO)
-                .toList();
+    public ResponseEntity<Page<TransactionDTO>> getTransactions(
+            @RequestParam(required = false) String search,
+            @RequestParam(required = false) Boolean income,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "20") int size
+    ) {
+        Pageable pageable = PageRequest.of(
+                page,
+                size,
+                Sort.by(Sort.Order.desc("date"), Sort.Order.desc("id"))
+        );
+
+        Page<TransactionDTO> result = service
+                .getFilteredPaged(search, income, pageable)
+                .map(this::toDTO);
+
         return ResponseEntity.ok(result);
     }
 
@@ -41,6 +54,12 @@ public class TransactionController {
         return ResponseEntity
                 .created(URI.create("/api/transactions/" + saved.getId()))
                 .body(toDTO(saved));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTransaction(@PathVariable Long id) {
+        service.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/dashboard")
@@ -60,7 +79,13 @@ public class TransactionController {
         double balance = totalIncome - totalExpenses;
 
         List<TransactionDTO> latestTransactions = transactions.stream()
-                .sorted((a, b) -> b.getDate().compareTo(a.getDate()))
+                .sorted((a, b) -> {
+                    int cmp = b.getDate().compareTo(a.getDate());
+                    if (cmp == 0) {
+                        return Long.compare(b.getId(), a.getId());
+                    }
+                    return cmp;
+                })
                 .limit(5)
                 .map(this::toDTO)
                 .toList();
@@ -79,27 +104,11 @@ public class TransactionController {
         return toDTO(service.getById(id));
     }
 
-    @GetMapping("/search")
-    public ResponseEntity<List<TransactionDTO>> searchByTitle(@RequestParam String title) {
-        List<TransactionDTO> result = service.searchByTitle(title)
-                .stream()
-                .map(this::toDTO)
-                .toList();
-        return ResponseEntity.ok(result);
-    }
-
-    @GetMapping("/paged")
-    public ResponseEntity<Page<TransactionDTO>> getPagedTransactions(Pageable pageable) {
-        Page<TransactionDTO> result = service.getPaged(pageable)
-                .map(this::toDTO);
-        return ResponseEntity.ok(result);
-    }
-
     private TransactionDTO toDTO(Transaction tx) {
         TransactionDTO dto = new TransactionDTO();
         dto.setId(tx.getId());
         dto.setTitle(tx.getTitle());
-        dto.setAmount(tx.getAmount());
+        dto.setAmount(Math.abs(tx.getAmount()));
         dto.setDate(tx.getDate());
         dto.setIncome(tx.isIncome());
         return dto;

@@ -11,7 +11,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -20,41 +19,40 @@ public class TransactionService {
     private static final Logger log = LoggerFactory.getLogger(TransactionService.class);
 
     private final TransactionRepository repository;
-    private final AppProperties appProperties; //Konfiguration injiziert
+    private final AppProperties appProperties;
 
     public TransactionService(TransactionRepository repository, AppProperties appProperties) {
         this.repository = repository;
         this.appProperties = appProperties;
     }
 
-    // Wird beim Start der App automatisch ausgeführt
     @PostConstruct
     public void init() {
         log.info("{} gestartet | Max. Transaktionen: {} | Währung: {}",
-        appProperties.getName(),
+                appProperties.getName(),
                 appProperties.getMaxTransactions(),
                 appProperties.getDefaultCurrency());
     }
 
-    // Alle Transaktionen ohne Paging
     public List<Transaction> getAll() {
         return repository.findAll();
     }
 
-    // Neu: Pagination und Sorting
-    public Page<Transaction> getPaged(Pageable pageable) {
-        return repository.findAll(pageable);
+    public Page<Transaction> getFilteredPaged(String search, Boolean income, Pageable pageable) {
+        String normalizedSearch = (search == null || search.isBlank()) ? null : search.trim();
+        return repository.findFiltered(normalizedSearch, income, pageable);
     }
 
     public Transaction save(Transaction transaction) {
-            return repository.save(transaction);
+        return repository.save(transaction);
     }
 
     public Transaction getById(Long id) {
         return repository.findById(id).orElseThrow(() -> new TransactionNotFoundException(id));
     }
 
-    public List<Transaction> searchByTitle(String title) {
-        return repository.findByTitleContainingIgnoreCase(title);
+    public void deleteById(Long id) {
+        Transaction tx = getById(id);
+        repository.delete(tx);
     }
 }

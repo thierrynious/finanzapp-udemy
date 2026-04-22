@@ -2,7 +2,9 @@ package com.finanzmanager.finanzapp.service;
 
 import com.finanzmanager.finanzapp.dto.BankStatementImportResult;
 import com.finanzmanager.finanzapp.model.Transaction;
+import com.finanzmanager.finanzapp.model.User;
 import com.finanzmanager.finanzapp.repository.TransactionRepository;
+import com.finanzmanager.finanzapp.service.security.CurrentUserService;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,13 +20,16 @@ import java.util.List;
 public class BankStatementUploadService {
 
     private final TransactionRepository transactionRepository;
+    private final CurrentUserService currentUserService;
 
-    public BankStatementUploadService(TransactionRepository transactionRepository) {
+    public BankStatementUploadService(TransactionRepository transactionRepository, CurrentUserService currentUserService) {
         this.transactionRepository = transactionRepository;
+        this.currentUserService = currentUserService;
     }
 
     @Transactional
     public BankStatementImportResult importCsv(MultipartFile file) {
+        User currentUser = currentUserService.getCurrentUser();
         int totalParsed = 0;
         int imported = 0;
         int duplicates = 0;
@@ -90,7 +95,13 @@ public class BankStatementUploadService {
                 final LocalDate finalParsedDate = parsedDate;
 
                 // Einfache Duplikatsprüfung:
-                boolean exists = transactionRepository.findAll().stream()
+                boolean exists = transactionRepository
+                        .findFilteredByUser(currentUser,
+                                null,
+                                null,
+                                org.springframework.data.domain.Pageable.unpaged())
+                        .getContent()
+                        .stream()
                         .anyMatch(tx ->
                                 tx.getDate().equals(finalParsedDate)
                                         && tx.getTitle().equalsIgnoreCase(title)
@@ -106,6 +117,7 @@ public class BankStatementUploadService {
                 transaction.setTitle(title);
                 transaction.setAmount(finalAmount);
                 transaction.setDate(finalParsedDate);
+                transaction.setUser(currentUser);
 
                 transactionRepository.save(transaction);
                 imported++;

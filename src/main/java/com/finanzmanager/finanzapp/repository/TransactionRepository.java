@@ -1,6 +1,7 @@
 package com.finanzmanager.finanzapp.repository;
 
 import com.finanzmanager.finanzapp.model.Transaction;
+import com.finanzmanager.finanzapp.model.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,16 +14,18 @@ import java.util.List;
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
     @Query("""
-        SELECT t
-        FROM Transaction t
-        WHERE (:search IS NULL OR LOWER(t.title) LIKE LOWER(CONCAT('%', :search, '%')))
-          AND (
-                :income IS NULL
-                OR (:income = true AND t.amount >= 0)
-                OR (:income = false AND t.amount < 0)
-              )
-    """)
-    Page<Transaction> findFiltered(String search, Boolean income, Pageable pageable);
+                SELECT t
+                FROM Transaction t
+                WHERE t.user = :user
+                  AND (:search IS NULL OR LOWER(t.title) LIKE LOWER(CONCAT('%', :search, '%')))
+                  AND (
+                        :income IS NULL
+                        OR (:income = true AND t.amount >= 0)
+                        OR (:income = false AND t.amount < 0)
+                      )
+            """)
+    Page<Transaction> findFilteredByUser(User user, String search, Boolean income, Pageable pageable);
 
     List<Transaction> findByTitleContainingIgnoreCase(String gehalt);
 }
+

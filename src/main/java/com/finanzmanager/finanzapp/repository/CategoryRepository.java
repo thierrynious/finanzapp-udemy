@@ -21,4 +21,8 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     List<Category> findByUserAndNameContainingIgnoreCase(User user, String keyword);
 
     boolean existsByUserAndNameIgnoreCaseAndType(User user, String name, CategoryType type);
+
+    Optional<Category> findByNameIgnoreCaseAndType(String name, CategoryType type);
+
+    Optional<Category> findByUserAndNameIgnoreCaseAndType(User user, String categoryName, CategoryType type);
 }

@@ -1,6 +1,7 @@
 package com.finanzmanager.finanzapp.service;
 
 import com.finanzmanager.finanzapp.dto.BankStatementImportResult;
+import com.finanzmanager.finanzapp.model.Category;
 import com.finanzmanager.finanzapp.model.Transaction;
 import com.finanzmanager.finanzapp.model.User;
 import com.finanzmanager.finanzapp.repository.TransactionRepository;
@@ -21,15 +22,22 @@ public class BankStatementUploadService {
 
     private final TransactionRepository transactionRepository;
     private final CurrentUserService currentUserService;
+    private final CategoryService categoryService;
 
-    public BankStatementUploadService(TransactionRepository transactionRepository, CurrentUserService currentUserService) {
+    public BankStatementUploadService(
+            TransactionRepository transactionRepository,
+            CurrentUserService currentUserService,
+            CategoryService categoryService
+    ) {
         this.transactionRepository = transactionRepository;
         this.currentUserService = currentUserService;
+        this.categoryService = categoryService;
     }
 
     @Transactional
     public BankStatementImportResult importCsv(MultipartFile file) {
         User currentUser = currentUserService.getCurrentUser();
+
         int totalParsed = 0;
         int imported = 0;
         int duplicates = 0;
@@ -38,6 +46,7 @@ public class BankStatementUploadService {
                 new InputStreamReader(file.getInputStream(), StandardCharsets.UTF_8))) {
 
             String headerLine = reader.readLine();
+
             if (headerLine == null || headerLine.isBlank()) {
                 return new BankStatementImportResult(0, 0, 0);
             }
@@ -51,10 +60,11 @@ public class BankStatementUploadService {
             int amountIndex = findIndex(headers, "Betrag");
 
             if (dateIndex == -1 || amountIndex == -1) {
-                throw new IllegalArgumentException("Pflichtspalten nicht gefunden.");
+                throw new IllegalArgumentException("Pflichtspalten nicht gefunden: Buchungstag oder Betrag.");
             }
 
             String line;
+
             while ((line = reader.readLine()) != null) {
                 if (line.isBlank()) {
                     continue;
@@ -68,8 +78,14 @@ public class BankStatementUploadService {
                 }
 
                 String dateRaw = parts[dateIndex].trim();
-                String bookingText = textIndex >= 0 && textIndex < parts.length ? parts[textIndex].trim() : "";
-                String purpose = purposeIndex >= 0 && purposeIndex < parts.length ? parts[purposeIndex].trim() : "";
+                String bookingText = textIndex >= 0 && textIndex < parts.length
+                        ? parts[textIndex].trim()
+                        : "";
+
+                String purpose = purposeIndex >= 0 && purposeIndex < parts.length
+                        ? parts[purposeIndex].trim()
+                        : "";
+
                 String amountRaw = parts[amountIndex].trim();
 
                 if (dateRaw.isBlank() || amountRaw.isBlank()) {
@@ -86,6 +102,7 @@ public class BankStatementUploadService {
                 LocalDate parsedDate = parseDate(dateRaw);
 
                 String resolvedTitle = !bookingText.isBlank() ? bookingText : purpose;
+
                 if (resolvedTitle.isBlank()) {
                     resolvedTitle = "Importierte Transaktion";
                 }
@@ -94,12 +111,13 @@ public class BankStatementUploadService {
                 final double finalAmount = amount;
                 final LocalDate finalParsedDate = parsedDate;
 
-                // Einfache Duplikatsprüfung:
                 boolean exists = transactionRepository
-                        .findFilteredByUser(currentUser,
+                        .findFilteredByUser(
+                                currentUser,
                                 null,
                                 null,
-                                org.springframework.data.domain.Pageable.unpaged())
+                                org.springframework.data.domain.Pageable.unpaged()
+                        )
                         .getContent()
                         .stream()
                         .anyMatch(tx ->
@@ -113,11 +131,16 @@ public class BankStatementUploadService {
                     continue;
                 }
 
+                String textForCategory = (purpose + " " + bookingText + " " + title).toLowerCase();
+
+                Category category = categoryService.detectCategory(textForCategory, finalAmount);
+
                 Transaction transaction = new Transaction();
                 transaction.setTitle(title);
                 transaction.setAmount(finalAmount);
                 transaction.setDate(finalParsedDate);
                 transaction.setUser(currentUser);
+                transaction.setCategory(category);
 
                 transactionRepository.save(transaction);
                 imported++;
@@ -136,6 +159,7 @@ public class BankStatementUploadService {
                 return i;
             }
         }
+
         return -1;
     }
 

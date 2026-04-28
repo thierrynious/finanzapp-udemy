@@ -111,6 +111,7 @@ public class TransactionController {
         dto.setAmount(Math.abs(tx.getAmount()));
         dto.setDate(tx.getDate());
         dto.setIncome(tx.isIncome());
+        dto.setCategory(tx.getCategory() != null ? tx.getCategory().getName() : "Unbekannt");
         return dto;
     }
 

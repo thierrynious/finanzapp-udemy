@@ -60,6 +60,10 @@ public class Transaction {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
     public boolean isIncome() {
         return amount >= 0;
     }

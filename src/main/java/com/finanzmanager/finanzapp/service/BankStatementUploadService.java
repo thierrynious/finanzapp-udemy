@@ -116,6 +116,7 @@ public class BankStatementUploadService {
                                 currentUser,
                                 null,
                                 null,
+                                null,
                                 org.springframework.data.domain.Pageable.unpaged()
                         )
                         .getContent()

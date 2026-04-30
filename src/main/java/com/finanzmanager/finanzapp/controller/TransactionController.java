@@ -30,6 +30,7 @@ public class TransactionController {
     public ResponseEntity<Page<TransactionDTO>> getTransactions(
             @RequestParam(required = false) String search,
             @RequestParam(required = false) Boolean income,
+            @RequestParam(required = false) Long categoryId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size
     ) {
@@ -40,7 +41,7 @@ public class TransactionController {
         );
 
         Page<TransactionDTO> result = service
-                .getFilteredPaged(search, income, pageable)
+                .getFilteredPaged(search, income, categoryId, pageable)
                 .map(this::toDTO);
 
         return ResponseEntity.ok(result);
@@ -54,6 +55,16 @@ public class TransactionController {
         return ResponseEntity
                 .created(URI.create("/api/transactions/" + saved.getId()))
                 .body(toDTO(saved));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<TransactionDTO> updateTransaction(
+            @PathVariable Long id,
+            @Valid @RequestBody TransactionDTO dto
+    ) {
+        Transaction entity = toEntity(dto);
+        Transaction updated = service.update(id, entity, dto.getCategoryId());
+        return ResponseEntity.ok(toDTO(updated));
     }
 
     @DeleteMapping("/{id}")
@@ -111,7 +122,14 @@ public class TransactionController {
         dto.setAmount(Math.abs(tx.getAmount()));
         dto.setDate(tx.getDate());
         dto.setIncome(tx.isIncome());
-        dto.setCategory(tx.getCategory() != null ? tx.getCategory().getName() : "Unbekannt");
+
+        if (tx.getCategory() != null) {
+            dto.setCategoryId(tx.getCategory().getId());
+            dto.setCategory(tx.getCategory().getName());
+        } else {
+            dto.setCategory("Unbekannt");
+        }
+
         return dto;
     }
 

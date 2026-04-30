@@ -2,8 +2,10 @@ package com.finanzmanager.finanzapp.service;
 
 import com.finanzmanager.finanzapp.config.AppProperties;
 import com.finanzmanager.finanzapp.exception.TransactionNotFoundException;
+import com.finanzmanager.finanzapp.model.Category;
 import com.finanzmanager.finanzapp.model.Transaction;
 import com.finanzmanager.finanzapp.model.User;
+import com.finanzmanager.finanzapp.repository.CategoryRepository;
 import com.finanzmanager.finanzapp.repository.TransactionRepository;
 import com.finanzmanager.finanzapp.service.security.CurrentUserService;
 import jakarta.annotation.PostConstruct;
@@ -21,15 +23,18 @@ public class TransactionService {
     private static final Logger log = LoggerFactory.getLogger(TransactionService.class);
 
     private final TransactionRepository repository;
+    private final CategoryRepository categoryRepository;
     private final AppProperties appProperties;
     private final CurrentUserService currentUserService;
 
     public TransactionService(
             TransactionRepository repository,
+            CategoryRepository categoryRepository,
             AppProperties appProperties,
             CurrentUserService currentUserService
     ) {
         this.repository = repository;
+        this.categoryRepository = categoryRepository;
         this.appProperties = appProperties;
         this.currentUserService = currentUserService;
     }
@@ -44,19 +49,54 @@ public class TransactionService {
 
     public List<Transaction> getAll() {
         User currentUser = currentUserService.getCurrentUser();
-        return repository.findFilteredByUser(currentUser, null, null, Pageable.unpaged()).getContent();
+        return repository.findFilteredByUser(
+                currentUser,
+                null,
+                null,
+                null,
+                Pageable.unpaged()
+        ).getContent();
     }
 
-    public Page<Transaction> getFilteredPaged(String search, Boolean income, Pageable pageable) {
+    public Page<Transaction> getFilteredPaged(
+            String search,
+            Boolean income,
+            Long categoryId,
+            Pageable pageable
+    ) {
         User currentUser = currentUserService.getCurrentUser();
         String normalizedSearch = (search == null || search.isBlank()) ? null : search.trim();
-        return repository.findFilteredByUser(currentUser, normalizedSearch, income, pageable);
+
+        return repository.findFilteredByUser(
+                currentUser,
+                normalizedSearch,
+                income,
+                categoryId,
+                pageable
+        );
     }
 
     public Transaction save(Transaction transaction) {
         User currentUser = currentUserService.getCurrentUser();
         transaction.setUser(currentUser);
         return repository.save(transaction);
+    }
+
+    public Transaction update(Long id, Transaction updatedTransaction, Long categoryId) {
+        Transaction existing = getById(id);
+        User currentUser = currentUserService.getCurrentUser();
+
+        existing.setTitle(updatedTransaction.getTitle());
+        existing.setAmount(updatedTransaction.getAmount());
+        existing.setDate(updatedTransaction.getDate());
+
+        if (categoryId != null) {
+            Category category = categoryRepository.findByIdAndUser(categoryId, currentUser)
+                    .orElseThrow(() -> new RuntimeException("Kategorie nicht gefunden"));
+            existing.setCategory(category);
+        }
+
+        return repository.save(existing);
     }
 
     public Transaction getById(Long id) {

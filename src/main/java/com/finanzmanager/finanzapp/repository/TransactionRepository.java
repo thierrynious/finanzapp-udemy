@@ -14,18 +14,24 @@ import java.util.List;
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
     @Query("""
-                SELECT t
-                FROM Transaction t
-                WHERE t.user = :user
-                  AND (:search IS NULL OR LOWER(t.title) LIKE LOWER(CONCAT('%', :search, '%')))
-                  AND (
-                        :income IS NULL
-                        OR (:income = true AND t.amount >= 0)
-                        OR (:income = false AND t.amount < 0)
-                      )
-            """)
-    Page<Transaction> findFilteredByUser(User user, String search, Boolean income, Pageable pageable);
+        SELECT t
+        FROM Transaction t
+        WHERE t.user = :user
+          AND (:search IS NULL OR LOWER(t.title) LIKE LOWER(CONCAT('%', :search, '%')))
+          AND (
+                :income IS NULL
+                OR (:income = true AND t.amount >= 0)
+                OR (:income = false AND t.amount < 0)
+              )
+          AND (:categoryId IS NULL OR t.category.id = :categoryId)
+    """)
+    Page<Transaction> findFilteredByUser(
+            User user,
+            String search,
+            Boolean income,
+            Long categoryId,
+            Pageable pageable
+    );
 
     List<Transaction> findByTitleContainingIgnoreCase(String gehalt);
 }
-

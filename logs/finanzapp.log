@@ -1,22 +1,22 @@
-2026-04-28T09:42:33.049+02:00  INFO 28596 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 28596 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T09:42:33.055+02:00 DEBUG 28596 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T09:42:33.055+02:00  INFO 28596 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T09:42:33.139+02:00  INFO 28596 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-28T09:42:33.141+02:00  INFO 28596 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-28T09:42:34.580+02:00  INFO 28596 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T09:42:34.681+02:00  INFO 28596 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 4 JPA repository interfaces.
-2026-04-28T09:42:35.726+02:00  INFO 28596 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T09:42:35.745+02:00  INFO 28596 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T09:42:35.750+02:00  INFO 28596 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T09:42:35.813+02:00  INFO 28596 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2672 ms
-2026-04-28T09:42:36.003+02:00  INFO 28596 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T09:42:36.149+02:00  INFO 28596 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-04-28T09:42:36.800+02:00  INFO 28596 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T09:42:36.840+02:00  INFO 28596 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T09:42:37.111+02:00  INFO 28596 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T09:42:37.115+02:00  INFO 28596 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-28T09:42:37.146+02:00  WARN 28596 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T09:42:37.173+02:00  INFO 28596 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-04-30T13:00:09.519+02:00  INFO 26036 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 26036 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
+2026-04-30T13:00:09.525+02:00 DEBUG 26036 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-04-30T13:00:09.526+02:00  INFO 26036 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-30T13:00:09.614+02:00  INFO 26036 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-30T13:00:09.614+02:00  INFO 26036 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-30T13:00:11.057+02:00  INFO 26036 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30T13:00:11.142+02:00  INFO 26036 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 4 JPA repository interfaces.
+2026-04-30T13:00:12.222+02:00  INFO 26036 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-30T13:00:12.248+02:00  INFO 26036 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-30T13:00:12.249+02:00  INFO 26036 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-30T13:00:12.328+02:00  INFO 26036 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2712 ms
+2026-04-30T13:00:12.566+02:00  INFO 26036 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-30T13:00:12.703+02:00  INFO 26036 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-04-30T13:00:13.905+02:00  INFO 26036 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30T13:00:14.007+02:00  INFO 26036 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-30T13:00:14.622+02:00  INFO 26036 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
+2026-04-30T13:00:14.624+02:00  INFO 26036 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-30T13:00:14.684+02:00  WARN 26036 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30T13:00:14.742+02:00  INFO 26036 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
@@ -28,88 +28,46 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-04-28T09:42:38.410+02:00  INFO 28596 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T09:42:38.534+02:00  INFO 28596 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T09:42:38.664+02:00  INFO 28596 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-28T09:42:38.973+02:00 DEBUG 28596 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T09:42:39.069+02:00  INFO 28596 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T09:42:40.502+02:00  INFO 28596 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
-2026-04-28T09:42:41.726+02:00  INFO 28596 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
-2026-04-28T09:42:41.823+02:00  INFO 28596 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-28T09:42:41.831+02:00  INFO 28596 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 9.532 seconds (process running for 11.096)
-2026-04-28T09:42:46.976+02:00  INFO 28596 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-28T09:42:47.016+02:00  INFO 28596 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-04-28T09:42:47.026+02:00  INFO 28596 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T09:42:47.030+02:00  INFO 28596 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-28T09:42:47.053+02:00  INFO 28596 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-04-28T10:55:43.452+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 20668 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T10:55:43.452+02:00 DEBUG 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T10:55:43.452+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T10:55:43.509+02:00  INFO 20668 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-28T10:55:43.509+02:00  INFO 20668 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-28T10:55:44.231+02:00  INFO 20668 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T10:55:44.294+02:00  INFO 20668 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 4 JPA repository interfaces.
-2026-04-28T10:55:44.895+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T10:55:44.911+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T10:55:44.911+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T10:55:44.943+02:00  INFO 20668 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1434 ms
-2026-04-28T10:55:45.039+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T10:55:45.111+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-04-28T10:55:45.531+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T10:55:45.563+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T10:55:45.771+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T10:55:45.773+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-28T10:55:45.800+02:00  WARN 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T10:55:45.825+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: FINANZAPP/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T10:55:46.675+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T10:55:46.729+02:00  INFO 20668 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T10:55:46.797+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-28T10:55:46.987+02:00 DEBUG 20668 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T10:55:47.071+02:00  INFO 20668 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T10:55:48.046+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
-2026-04-28T10:55:48.616+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
-2026-04-28T10:55:48.670+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-28T10:55:48.675+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 5.663 seconds (process running for 6.085)
-2026-04-28T10:56:20.109+02:00  INFO 20668 --- [finanzapp] [http-nio-8081-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-28T10:56:20.110+02:00  INFO 20668 --- [finanzapp] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-28T10:56:20.113+02:00  INFO 20668 --- [finanzapp] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-04-28T11:06:59.779+02:00  WARN 20668 --- [finanzapp] [http-nio-8081-exec-8] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+2026-04-30T13:00:17.153+02:00  INFO 26036 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30T13:00:17.349+02:00  INFO 26036 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30T13:00:17.535+02:00  INFO 26036 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-30T13:00:18.044+02:00 DEBUG 26036 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-04-30T13:00:18.205+02:00  INFO 26036 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-30T13:00:20.940+02:00  INFO 26036 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
+2026-04-30T13:00:22.634+02:00  INFO 26036 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
+2026-04-30T13:00:22.808+02:00  INFO 26036 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-30T13:00:22.824+02:00  INFO 26036 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 13.911 seconds (process running for 15.754)
+2026-04-30T13:00:58.262+02:00  INFO 26036 --- [finanzapp] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-30T13:00:58.262+02:00  INFO 26036 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-30T13:00:58.262+02:00  INFO 26036 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-30T13:01:19.788+02:00  WARN 26036 --- [finanzapp] [http-nio-8081-exec-8] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
 	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
 	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
 
-2026-04-28T11:11:09.474+02:00  INFO 20668 --- [finanzapp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 7 class path changes (0 additions, 7 deletions, 0 modifications)
-2026-04-28T11:11:09.479+02:00  INFO 20668 --- [finanzapp] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-28T11:11:09.500+02:00  INFO 20668 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-04-28T11:11:09.509+02:00  INFO 20668 --- [finanzapp] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T11:11:09.514+02:00  INFO 20668 --- [finanzapp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-28T11:11:09.517+02:00  INFO 20668 --- [finanzapp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-04-28T11:11:09.721+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 20668 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T11:11:09.721+02:00 DEBUG 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T11:11:09.721+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T11:11:10.068+02:00  INFO 20668 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T11:11:10.099+02:00  INFO 20668 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
-2026-04-28T11:11:10.293+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T11:11:10.295+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T11:11:10.295+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T11:11:10.315+02:00  INFO 20668 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 587 ms
-2026-04-28T11:11:10.403+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T11:11:10.450+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T11:11:10.457+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-04-28T11:11:10.469+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn13: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T11:11:10.470+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-04-28T11:11:10.471+02:00  WARN 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T11:11:10.472+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-04-30T13:06:38.150+02:00  INFO 26036 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-30T13:06:38.170+02:00  INFO 26036 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-30T13:06:38.177+02:00  INFO 26036 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30T13:06:38.182+02:00  INFO 26036 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-30T13:06:38.190+02:00  INFO 26036 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-30T13:33:37.429+02:00  INFO 34368 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 34368 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
+2026-04-30T13:33:37.431+02:00 DEBUG 34368 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-04-30T13:33:37.432+02:00  INFO 34368 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-30T13:33:37.473+02:00  INFO 34368 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-30T13:33:37.473+02:00  INFO 34368 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-30T13:33:38.277+02:00  INFO 34368 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30T13:33:38.332+02:00  INFO 34368 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+2026-04-30T13:33:38.938+02:00  INFO 34368 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-30T13:33:38.952+02:00  INFO 34368 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-30T13:33:38.953+02:00  INFO 34368 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-30T13:33:38.992+02:00  INFO 34368 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1518 ms
+2026-04-30T13:33:39.084+02:00  INFO 34368 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-30T13:33:39.159+02:00  INFO 34368 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-04-30T13:33:39.596+02:00  INFO 34368 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30T13:33:39.637+02:00  INFO 34368 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-30T13:33:39.857+02:00  INFO 34368 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
+2026-04-30T13:33:39.859+02:00  INFO 34368 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-30T13:33:39.885+02:00  WARN 34368 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30T13:33:39.904+02:00  INFO 34368 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
@@ -121,738 +79,31 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-04-28T11:11:10.596+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T11:11:10.602+02:00  INFO 20668 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T11:11:10.677+02:00 DEBUG 20668 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T11:11:10.742+02:00  INFO 20668 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T11:11:10.766+02:00  WARN 20668 --- [finanzapp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bankStatementUploadController' defined in file [C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes\com\finanzmanager\finanzapp\controller\BankStatementUploadController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.finanzmanager.finanzapp.service.BankStatementUploadService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-04-28T11:11:10.767+02:00  INFO 20668 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T11:11:10.768+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2026-04-28T11:11:10.818+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2026-04-28T11:11:10.818+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-04-28T11:11:10.829+02:00  INFO 20668 --- [finanzapp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-04-28T11:11:10.853+02:00 ERROR 20668 --- [finanzapp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.finanzmanager.finanzapp.controller.BankStatementUploadController required a bean of type 'com.finanzmanager.finanzapp.service.BankStatementUploadService' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.finanzmanager.finanzapp.service.BankStatementUploadService' in your configuration.
-
-2026-04-28T11:11:12.343+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 20668 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T11:11:12.345+02:00 DEBUG 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T11:11:12.345+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T11:11:12.489+02:00  INFO 34556 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 34556 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T11:11:12.492+02:00 DEBUG 34556 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T11:11:12.493+02:00  INFO 34556 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T11:11:12.548+02:00  INFO 34556 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-28T11:11:12.548+02:00  INFO 34556 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-28T11:11:12.589+02:00  INFO 20668 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T11:11:12.609+02:00  INFO 20668 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
-2026-04-28T11:11:12.776+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T11:11:12.778+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T11:11:12.779+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T11:11:12.804+02:00  INFO 20668 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 456 ms
-2026-04-28T11:11:12.846+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T11:11:12.874+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T11:11:12.875+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2026-04-28T11:11:12.885+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn21: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T11:11:12.885+02:00  INFO 20668 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2026-04-28T11:11:12.886+02:00  WARN 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T11:11:12.887+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: FINANZAPP/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T11:11:12.989+02:00  INFO 20668 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T11:11:12.992+02:00  INFO 20668 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T11:11:13.051+02:00 DEBUG 20668 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T11:11:13.086+02:00  INFO 20668 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T11:11:13.131+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
-2026-04-28T11:11:13.359+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
-2026-04-28T11:11:13.362+02:00  INFO 34556 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T11:11:13.378+02:00  INFO 20668 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-28T11:11:13.381+02:00  INFO 20668 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 1.066 seconds (process running for 930.791)
-2026-04-28T11:11:13.383+02:00  INFO 20668 --- [finanzapp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-04-28T11:11:13.407+02:00  INFO 34556 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
-2026-04-28T11:11:13.902+02:00  INFO 34556 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T11:11:13.912+02:00  INFO 34556 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T11:11:13.913+02:00  INFO 34556 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T11:11:13.948+02:00  INFO 34556 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1399 ms
-2026-04-28T11:11:14.023+02:00  INFO 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T11:11:14.060+02:00  INFO 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-04-28T11:11:14.417+02:00  INFO 34556 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T11:11:14.439+02:00  INFO 34556 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T11:11:15.535+02:00  WARN 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 90020, SQLState: 90020
-2026-04-28T11:11:15.535+02:00  WARN 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.jdbc.error             : Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]
-2026-04-28T11:11:15.541+02:00  WARN 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
-
-org.hibernate.exception.GenericJDBCException: Unable to obtain isolated JDBC connection [Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]] [n/a]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:39) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:356) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1712) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1461) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1762) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4416) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614) ~[spring-context-7.0.3.jar:7.0.3]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
-	at com.finanzmanager.finanzapp.FinanzappApplication.main(FinanzappApplication.java:14) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
-Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.message.DbException.get(DbException.java:212) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:165) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.db.Store.<init>(Store.java:142) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.Database.<init>(Database.java:328) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.Engine.openSession(Engine.java:92) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.Engine.openSession(Engine.java:222) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.Engine.createSession(Engine.java:201) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:350) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.4.240.jar:2.4.240]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	... 125 common frames omitted
-Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db [2.4.240/7]
-	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.MVStore.<init>(MVStore.java:291) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2164) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.db.Store.<init>(Store.java:133) ~[h2-2.4.240.jar:2.4.240]
-	... 142 common frames omitted
-
-2026-04-28T11:11:15.560+02:00  WARN 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T11:11:15.567+02:00  INFO 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [undefined/unknown]
-	Database driver: undefined/unknown
-	Database dialect: H2Dialect
-	Database version: 2.1.214
-	Default catalog/schema: unknown/unknown
-	Autocommit mode: undefined/unknown
-	Isolation level: NONE [default NONE]
-	JDBC fetch size: undefined/unknown
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T11:11:16.323+02:00  INFO 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T11:11:16.339+02:00  INFO 34556 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T11:11:17.355+02:00  WARN 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 90020, SQLState: 90020
-2026-04-28T11:11:17.356+02:00  WARN 34556 --- [finanzapp] [restartedMain] org.hibernate.orm.jdbc.error             : Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]
-2026-04-28T11:11:17.360+02:00 ERROR 34556 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]] [n/a]
-2026-04-28T11:11:17.360+02:00 ERROR 34556 --- [finanzapp] [restartedMain] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes\com\finanzmanager\finanzapp\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'customUserDetailsService' defined in file [C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes\com\finanzmanager\finanzapp\service\security\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.finanzmanager.finanzapp.repository.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2026-04-28T11:11:17.380+02:00  INFO 34556 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-04-28T11:11:17.383+02:00  WARN 34556 --- [finanzapp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
-2026-04-28T11:11:17.389+02:00  INFO 34556 --- [finanzapp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-04-28T11:11:17.399+02:00 ERROR 34556 --- [finanzapp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.context.ApplicationContextException: Unable to start web server
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614) ~[spring-context-7.0.3.jar:7.0.3]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
-	at com.finanzmanager.finanzapp.FinanzappApplication.main(FinanzappApplication.java:14) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
-	... 11 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes\com\finanzmanager\finanzapp\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'customUserDetailsService' defined in file [C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes\com\finanzmanager\finanzapp\service\security\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.finanzmanager.finanzapp.repository.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.0.2.jar:4.0.2]
-	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4416) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
-	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
-	... 16 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes\com\finanzmanager\finanzapp\service\security\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.finanzmanager.finanzapp.repository.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1762) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.3.jar:7.0.3]
-	... 56 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.finanzmanager.finanzapp.repository.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1712) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1461) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.3.jar:7.0.3]
-	... 70 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:356) ~[spring-beans-7.0.3.jar:7.0.3]
-	... 84 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]] [n/a]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-7.0.3.jar:7.0.3]
-	... 96 common frames omitted
-Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]] [n/a]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:428) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
-	... 103 common frames omitted
-Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]] [n/a]
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:49) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:37) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:61) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:41) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:36) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:73) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:63) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.extract.internal.CachingDatabaseInformationImpl.<init>(CachingDatabaseInformationImpl.java:43) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.buildDatabaseInformation(GroupedSchemaMigratorImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:83) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
-	... 107 common frames omitted
-Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Datenbank wird wahrscheinlich bereits benutzt: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Mögliche Lösungen: alle Verbindungen schliessen; Server Modus verwenden
-Database may be already in use: "C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-240]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.message.DbException.get(DbException.java:212) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:165) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.db.Store.<init>(Store.java:142) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.Database.<init>(Database.java:328) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.Engine.openSession(Engine.java:92) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.Engine.openSession(Engine.java:222) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.Engine.createSession(Engine.java:201) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:350) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.4.240.jar:2.4.240]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
-	... 129 common frames omitted
-Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Udemy Kurs Spring Boot/finanzapp-saas-restored/data/finanzapp.mv.db [2.4.240/7]
-	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.MVStore.<init>(MVStore.java:291) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2164) ~[h2-2.4.240.jar:2.4.240]
-	at org.h2.mvstore.db.Store.<init>(Store.java:133) ~[h2-2.4.240.jar:2.4.240]
-	... 146 common frames omitted
-
-2026-04-28T11:11:26.910+02:00  INFO 20668 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-28T11:11:26.927+02:00  INFO 20668 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-04-28T11:11:26.930+02:00  INFO 20668 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T11:11:26.931+02:00  INFO 20668 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2026-04-28T11:11:26.988+02:00  INFO 20668 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2026-04-28T11:11:35.077+02:00  INFO 36396 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 36396 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T11:11:35.080+02:00 DEBUG 36396 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T11:11:35.081+02:00  INFO 36396 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T11:11:35.128+02:00  INFO 36396 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-28T11:11:35.128+02:00  INFO 36396 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-28T11:11:35.726+02:00  INFO 36396 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T11:11:35.770+02:00  INFO 36396 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 4 JPA repository interfaces.
-2026-04-28T11:11:36.247+02:00  INFO 36396 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T11:11:36.257+02:00  INFO 36396 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T11:11:36.258+02:00  INFO 36396 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T11:11:36.292+02:00  INFO 36396 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1163 ms
-2026-04-28T11:11:36.366+02:00  INFO 36396 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T11:11:36.411+02:00  INFO 36396 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-04-28T11:11:36.758+02:00  INFO 36396 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T11:11:36.790+02:00  INFO 36396 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T11:11:36.947+02:00  INFO 36396 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T11:11:36.948+02:00  INFO 36396 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-28T11:11:36.969+02:00  WARN 36396 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T11:11:36.990+02:00  INFO 36396 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: FINANZAPP/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T11:11:37.744+02:00  INFO 36396 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T11:11:37.794+02:00  INFO 36396 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T11:11:37.851+02:00  INFO 36396 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-28T11:11:38.000+02:00 DEBUG 36396 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T11:11:38.059+02:00  INFO 36396 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T11:11:38.952+02:00  INFO 36396 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
-2026-04-28T11:11:39.486+02:00  INFO 36396 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
-2026-04-28T11:11:39.535+02:00  INFO 36396 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-28T11:11:39.540+02:00  INFO 36396 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 4.865 seconds (process running for 5.574)
-2026-04-28T11:12:23.191+02:00  INFO 36396 --- [finanzapp] [http-nio-8081-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-28T11:12:23.191+02:00  INFO 36396 --- [finanzapp] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-28T11:12:23.195+02:00  INFO 36396 --- [finanzapp] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-04-28T11:12:23.918+02:00  WARN 36396 --- [finanzapp] [http-nio-8081-exec-2] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+2026-04-30T13:33:40.817+02:00  INFO 34368 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30T13:33:40.872+02:00  INFO 34368 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30T13:33:40.941+02:00  INFO 34368 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-30T13:33:41.153+02:00 DEBUG 34368 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-04-30T13:33:41.223+02:00  INFO 34368 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-30T13:33:42.289+02:00  INFO 34368 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
+2026-04-30T13:33:42.928+02:00  INFO 34368 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
+2026-04-30T13:33:42.986+02:00  INFO 34368 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-30T13:33:42.992+02:00  INFO 34368 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 6.018 seconds (process running for 6.914)
+2026-04-30T13:46:12.731+02:00  INFO 34368 --- [finanzapp] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-30T13:46:12.731+02:00  INFO 34368 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-30T13:46:12.735+02:00  INFO 34368 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-04-30T13:46:13.644+02:00  WARN 34368 --- [finanzapp] [http-nio-8081-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
 	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
 	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
 
-2026-04-28T11:42:49.184+02:00  WARN 36396 --- [finanzapp] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m41s891ms643µs800ns).
-2026-04-28T11:46:51.517+02:00  INFO 36396 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-28T11:46:51.532+02:00  INFO 36396 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-04-28T11:46:51.537+02:00  INFO 36396 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T11:46:51.540+02:00  INFO 36396 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-28T11:46:51.541+02:00  INFO 36396 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-04-28T12:21:32.570+02:00  INFO 20184 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 20184 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T12:21:32.573+02:00 DEBUG 20184 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T12:21:32.573+02:00  INFO 20184 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T12:21:32.614+02:00  INFO 20184 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-28T12:21:32.614+02:00  INFO 20184 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-28T12:21:33.472+02:00  INFO 20184 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T12:21:33.532+02:00  INFO 20184 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
-2026-04-28T12:21:34.175+02:00  INFO 20184 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T12:21:34.189+02:00  INFO 20184 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T12:21:34.189+02:00  INFO 20184 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T12:21:34.229+02:00  INFO 20184 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1615 ms
-2026-04-28T12:21:34.331+02:00  INFO 20184 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T12:21:34.415+02:00  INFO 20184 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-04-28T12:21:34.903+02:00  INFO 20184 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T12:21:34.934+02:00  INFO 20184 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T12:21:35.164+02:00  INFO 20184 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T12:21:35.165+02:00  INFO 20184 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-28T12:21:35.192+02:00  WARN 20184 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T12:21:35.210+02:00  INFO 20184 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: FINANZAPP/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T12:21:36.128+02:00  INFO 20184 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T12:21:36.179+02:00  INFO 20184 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T12:21:36.243+02:00  INFO 20184 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-28T12:21:36.616+02:00 DEBUG 20184 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T12:21:36.755+02:00  INFO 20184 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T12:21:38.331+02:00  INFO 20184 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
-2026-04-28T12:21:39.656+02:00  INFO 20184 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
-2026-04-28T12:21:39.768+02:00  INFO 20184 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-28T12:21:39.784+02:00  INFO 20184 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 7.669 seconds (process running for 8.603)
-2026-04-28T12:22:20.190+02:00  INFO 20184 --- [finanzapp] [http-nio-8081-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-28T12:22:20.190+02:00  INFO 20184 --- [finanzapp] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-28T12:22:20.192+02:00  INFO 20184 --- [finanzapp] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-04-28T12:23:11.336+02:00  INFO 20184 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-28T12:23:11.356+02:00  INFO 20184 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-04-28T12:23:11.363+02:00  INFO 20184 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T12:23:11.366+02:00  INFO 20184 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-28T12:23:11.368+02:00  INFO 20184 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-04-28T12:23:14.158+02:00  INFO 42740 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 42740 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T12:23:14.161+02:00 DEBUG 42740 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T12:23:14.162+02:00  INFO 42740 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T12:23:14.199+02:00  INFO 42740 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-28T12:23:14.199+02:00  INFO 42740 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-28T12:23:14.783+02:00  INFO 42740 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T12:23:14.827+02:00  INFO 42740 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
-2026-04-28T12:23:15.322+02:00  INFO 42740 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T12:23:15.332+02:00  INFO 42740 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T12:23:15.332+02:00  INFO 42740 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T12:23:15.367+02:00  INFO 42740 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1167 ms
-2026-04-28T12:23:15.446+02:00  INFO 42740 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T12:23:15.485+02:00  INFO 42740 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-04-28T12:23:15.804+02:00  INFO 42740 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T12:23:15.830+02:00  INFO 42740 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T12:23:15.985+02:00  INFO 42740 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T12:23:15.986+02:00  INFO 42740 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-28T12:23:16.007+02:00  WARN 42740 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T12:23:16.027+02:00  INFO 42740 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: FINANZAPP/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T12:23:16.754+02:00  INFO 42740 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T12:23:16.798+02:00  INFO 42740 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T12:23:16.857+02:00  INFO 42740 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-28T12:23:17.013+02:00 DEBUG 42740 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T12:23:17.081+02:00  INFO 42740 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T12:23:17.936+02:00  INFO 42740 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
-2026-04-28T12:23:18.453+02:00  INFO 42740 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
-2026-04-28T12:23:18.501+02:00  INFO 42740 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-28T12:23:18.507+02:00  INFO 42740 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 4.728 seconds (process running for 5.604)
-2026-04-28T12:24:06.867+02:00  INFO 42740 --- [finanzapp] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-28T12:24:06.867+02:00  INFO 42740 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-28T12:24:06.867+02:00  INFO 42740 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-04-28T12:27:34.476+02:00  WARN 42740 --- [finanzapp] [http-nio-8081-exec-4] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
-
-2026-04-28T12:35:11.688+02:00  INFO 42740 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-28T12:35:11.709+02:00  INFO 42740 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-04-28T12:35:11.714+02:00  INFO 42740 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T12:35:11.717+02:00  INFO 42740 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-28T12:35:11.718+02:00  INFO 42740 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-04-28T12:54:35.724+02:00  INFO 8564 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 8564 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T12:54:35.726+02:00 DEBUG 8564 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T12:54:35.727+02:00  INFO 8564 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T12:54:35.771+02:00  INFO 8564 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-28T12:54:35.771+02:00  INFO 8564 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-28T12:54:36.574+02:00  INFO 8564 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T12:54:36.625+02:00  INFO 8564 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
-2026-04-28T12:54:37.314+02:00  INFO 8564 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T12:54:37.327+02:00  INFO 8564 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T12:54:37.327+02:00  INFO 8564 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T12:54:37.372+02:00  INFO 8564 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1600 ms
-2026-04-28T12:54:37.474+02:00  INFO 8564 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T12:54:37.549+02:00  INFO 8564 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-04-28T12:54:38.012+02:00  INFO 8564 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T12:54:38.043+02:00  INFO 8564 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T12:54:38.275+02:00  INFO 8564 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T12:54:38.276+02:00  INFO 8564 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-28T12:54:38.305+02:00  WARN 8564 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T12:54:38.326+02:00  INFO 8564 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: FINANZAPP/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T12:54:39.205+02:00  INFO 8564 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T12:54:39.254+02:00  INFO 8564 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T12:54:39.320+02:00  INFO 8564 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-28T12:54:39.514+02:00 DEBUG 8564 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T12:54:39.576+02:00  INFO 8564 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T12:54:40.549+02:00  INFO 8564 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
-2026-04-28T12:54:41.146+02:00  INFO 8564 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
-2026-04-28T12:54:41.211+02:00  INFO 8564 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-28T12:54:41.218+02:00  INFO 8564 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 5.924 seconds (process running for 6.707)
-2026-04-28T12:54:55.349+02:00  INFO 8564 --- [finanzapp] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-28T12:54:55.349+02:00  INFO 8564 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-28T12:54:55.351+02:00  INFO 8564 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-04-28T12:54:56.493+02:00  WARN 8564 --- [finanzapp] [http-nio-8081-exec-2] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
-
-2026-04-28T13:02:53.948+02:00  INFO 8564 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-28T13:02:53.962+02:00  INFO 8564 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-04-28T13:02:53.968+02:00  INFO 8564 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T13:02:53.971+02:00  INFO 8564 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-28T13:02:53.973+02:00  INFO 8564 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-04-28T13:12:52.357+02:00  INFO 30444 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 30444 (C:\Udemy Kurs Spring Boot\finanzapp-saas-restored\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp-saas-restored)
-2026-04-28T13:12:52.360+02:00 DEBUG 30444 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-04-28T13:12:52.360+02:00  INFO 30444 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T13:12:52.398+02:00  INFO 30444 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-28T13:12:52.398+02:00  INFO 30444 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-28T13:12:53.088+02:00  INFO 30444 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T13:12:53.152+02:00  INFO 30444 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
-2026-04-28T13:12:53.714+02:00  INFO 30444 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-28T13:12:53.726+02:00  INFO 30444 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T13:12:53.727+02:00  INFO 30444 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-04-28T13:12:53.763+02:00  INFO 30444 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1365 ms
-2026-04-28T13:12:53.856+02:00  INFO 30444 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-28T13:12:53.904+02:00  INFO 30444 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-04-28T13:12:54.273+02:00  INFO 30444 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T13:12:54.322+02:00  INFO 30444 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T13:12:54.669+02:00  INFO 30444 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/finanzapp user=SA
-2026-04-28T13:12:54.669+02:00  INFO 30444 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-28T13:12:54.723+02:00  WARN 30444 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-28T13:12:54.766+02:00  INFO 30444 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:file:./data/finanzapp]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: FINANZAPP/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T13:12:56.070+02:00  INFO 30444 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T13:12:56.165+02:00  INFO 30444 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T13:12:56.300+02:00  INFO 30444 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-28T13:12:56.619+02:00 DEBUG 30444 --- [finanzapp] [restartedMain] c.f.f.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2026-04-28T13:12:56.765+02:00  INFO 30444 --- [finanzapp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-28T13:12:58.561+02:00  INFO 30444 --- [finanzapp] [restartedMain] c.f.f.service.TransactionService         : FinanzApp gestartet | Max. Transaktionen: 500 | Währung: EUR
-2026-04-28T13:12:59.615+02:00  INFO 30444 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/finanzapp'
-2026-04-28T13:12:59.717+02:00  INFO 30444 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-28T13:12:59.733+02:00  INFO 30444 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 7.735 seconds (process running for 8.41)
-2026-04-28T13:13:00.623+02:00  INFO 30444 --- [finanzapp] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-28T13:13:00.623+02:00  INFO 30444 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-28T13:13:00.623+02:00  INFO 30444 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-04-28T13:13:04.697+02:00  WARN 30444 --- [finanzapp] [http-nio-8081-exec-6] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
-
-2026-04-28T13:13:04.697+02:00  WARN 30444 --- [finanzapp] [http-nio-8081-exec-5] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
-
-2026-04-28T13:13:51.093+02:00  INFO 30444 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-28T13:13:51.112+02:00  INFO 30444 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-04-28T13:13:51.119+02:00  INFO 30444 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T13:13:51.122+02:00  INFO 30444 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-28T13:13:51.184+02:00  INFO 30444 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-30T13:47:59.136+02:00  WARN 34368 --- [finanzapp] [http-nio-8081-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Could not initialize proxy [com.finanzmanager.finanzapp.model.User#1] - no session]
+2026-04-30T13:47:59.136+02:00  WARN 34368 --- [finanzapp] [http-nio-8081-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Could not initialize proxy [com.finanzmanager.finanzapp.model.User#1] - no session]
+2026-04-30T14:22:10.123+02:00  WARN 34368 --- [finanzapp] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m29s680ms321µs800ns).
+2026-04-30T15:05:22.793+02:00  WARN 34368 --- [finanzapp] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=38m12s597ms30µs600ns).
+2026-04-30T15:07:50.182+02:00  WARN 34368 --- [finanzapp] [http-nio-8081-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Could not initialize proxy [com.finanzmanager.finanzapp.model.User#1] - no session]
+2026-04-30T15:07:50.182+02:00  WARN 34368 --- [finanzapp] [http-nio-8081-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Could not initialize proxy [com.finanzmanager.finanzapp.model.User#1] - no session]
+2026-04-30T15:42:24.655+02:00  WARN 34368 --- [finanzapp] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m31s432ms866µs500ns).
+2026-04-30T15:44:26.360+02:00  INFO 34368 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-30T15:44:26.384+02:00  INFO 34368 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-30T15:44:26.395+02:00  INFO 34368 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30T15:44:26.409+02:00  INFO 34368 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-30T15:44:26.412+02:00  INFO 34368 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

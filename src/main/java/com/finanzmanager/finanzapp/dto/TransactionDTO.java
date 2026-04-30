@@ -12,5 +12,7 @@ public class TransactionDTO {
     private double amount;
     private LocalDate date;
     private boolean income;
+
+    private Long categoryId;
     private String category;
 }

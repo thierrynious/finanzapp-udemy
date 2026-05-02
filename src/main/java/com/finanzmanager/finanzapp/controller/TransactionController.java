@@ -15,6 +15,7 @@ import java.net.URI;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/transactions")
@@ -89,6 +90,14 @@ public class TransactionController {
 
         double balance = totalIncome - totalExpenses;
 
+        Map<String, Double> categoryStats = transactions.stream()
+                .filter(tx -> !tx.isIncome())
+                .filter(tx -> tx.getCategory() != null)
+                .collect(Collectors.groupingBy(
+                        tx -> tx.getCategory().getName(),
+                        Collectors.summingDouble(tx -> Math.abs(tx.getAmount()))
+                ));
+
         List<TransactionDTO> latestTransactions = transactions.stream()
                 .sorted((a, b) -> {
                     int cmp = b.getDate().compareTo(a.getDate());
@@ -105,6 +114,7 @@ public class TransactionController {
         dashboard.put("balance", balance);
         dashboard.put("totalIncome", totalIncome);
         dashboard.put("totalExpenses", totalExpenses);
+        dashboard.put("categoryStats", categoryStats);
         dashboard.put("latestTransactions", latestTransactions);
 
         return ResponseEntity.ok(dashboard);

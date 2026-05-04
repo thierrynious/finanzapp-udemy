@@ -19,6 +19,70 @@ public class CategoryService {
     private final CategoryRepository categoryRepository;
     private final UserRepository userRepository;
 
+    private static final List<CategoryRule> RULES = List.of(
+            new CategoryRule("Lebensmittel", CategoryType.AUSGABE, List.of(
+                    "rewe", "aldi", "lidl", "edeka", "netto", "penny",
+                    "kaufland", "supermarkt", "dm", "rossmann"
+            )),
+
+            new CategoryRule("Shopping", CategoryType.AUSGABE, List.of(
+                    "amazon", "amzn", "zalando", "ebay", "klarna"
+            )),
+
+            new CategoryRule("Miete", CategoryType.AUSGABE, List.of(
+                    "miete", "rent", "wohnung", "vermieter"
+            )),
+
+            new CategoryRule("Transport", CategoryType.AUSGABE, List.of(
+                    "bahn", "deutsche bahn", "db ", "uber", "bolt",
+                    "tankstelle", "shell", "aral", "esso"
+            )),
+
+            new CategoryRule("Telefon & Internet", CategoryType.AUSGABE, List.of(
+                    "vodafone", "telekom", "o2", "telefon", "internet", "handy"
+            )),
+
+            new CategoryRule("Nebenkosten", CategoryType.AUSGABE, List.of(
+                    "strom", "gas", "energie", "wasser", "stadtwerke"
+            )),
+
+            new CategoryRule("Versicherung", CategoryType.AUSGABE, List.of(
+                    "versicherung", "huk", "allianz", "axa"
+            )),
+
+            new CategoryRule("Abos & Unterhaltung", CategoryType.AUSGABE, List.of(
+                    "netflix", "spotify", "disney", "apple", "google",
+                    "prime video", "youtube", "deezer"
+            )),
+
+            new CategoryRule("Bargeld", CategoryType.AUSGABE, List.of(
+                    "bargeldauszahlung", "geldautomat", "atm"
+            )),
+
+            new CategoryRule("Einkommen", CategoryType.EINNAHME, List.of(
+                    "gehalt", "lohn", "salary", "echtzeit-gutschrift",
+                    "gutschrift", "überweisung", "ueberweisung"
+            )),
+            new CategoryRule("Finanzen", CategoryType.AUSGABE, List.of(
+                    "kreditkarte",
+                    "kreditkartenabrechnung",
+                    "eigene kreditkartenabrechn",
+                    "bankgebühr",
+                    "entgeltabschluss"
+            )),
+            new CategoryRule("Alltag", CategoryType.AUSGABE, List.of(
+                    "kartenzahlung",
+                    "zahlung",
+                    "pos"
+            )),
+            new CategoryRule("Transfers", CategoryType.AUSGABE, List.of(
+                    "überweisung",
+                    "ueberweisung",
+                    "online-ueberweisung",
+                    "sepa"
+            ))
+    );
+
     private User getCurrentUser() {
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
 
@@ -80,91 +144,13 @@ public class CategoryService {
         User user = getCurrentUser();
 
         String text = textForCategory == null ? "" : textForCategory.toLowerCase();
-
-        String categoryName;
         CategoryType type = amount >= 0 ? CategoryType.EINNAHME : CategoryType.AUSGABE;
 
-        if (amount >= 0) {
-            categoryName = "Einkommen";
-        } else if (
-                text.contains("rewe")
-                        || text.contains("aldi")
-                        || text.contains("lidl")
-                        || text.contains("edeka")
-                        || text.contains("netto")
-                        || text.contains("penny")
-                        || text.contains("kaufland")
-                        || text.contains("supermarkt")
-        ) {
-            categoryName = "Lebensmittel";
-        } else if (
-                text.contains("amazon")
-                        || text.contains("zalando")
-                        || text.contains("ebay")
-                        || text.contains("paypal")
-                        || text.contains("klarna")
-        ) {
-            categoryName = "Shopping";
-        } else if (
-                text.contains("miete")
-                        || text.contains("rent")
-                        || text.contains("wohnung")
-                        || text.contains("vermieter")
-        ) {
-            categoryName = "Miete";
-        } else if (
-                text.contains("bahn")
-                        || text.contains("deutsche bahn")
-                        || text.contains("db ")
-                        || text.contains("uber")
-                        || text.contains("bolt")
-                        || text.contains("tankstelle")
-                        || text.contains("shell")
-                        || text.contains("aral")
-                        || text.contains("esso")
-        ) {
-            categoryName = "Transport";
-        } else if (
-                text.contains("vodafone")
-                        || text.contains("telekom")
-                        || text.contains("o2")
-                        || text.contains("telefon")
-                        || text.contains("internet")
-                        || text.contains("handy")
-        ) {
-            categoryName = "Telefon & Internet";
-        } else if (
-                text.contains("strom")
-                        || text.contains("gas")
-                        || text.contains("energie")
-                        || text.contains("wasser")
-                        || text.contains("stadtwerke")
-        ) {
-            categoryName = "Nebenkosten";
-        } else if (
-                text.contains("versicherung")
-                        || text.contains("huk")
-                        || text.contains("allianz")
-                        || text.contains("axa")
-        ) {
-            categoryName = "Versicherung";
-        } else if (
-                text.contains("netflix")
-                        || text.contains("spotify")
-                        || text.contains("disney")
-                        || text.contains("apple")
-                        || text.contains("google")
-        ) {
-            categoryName = "Abos & Unterhaltung";
-        } else if (
-                text.contains("bargeldauszahlung")
-                        || text.contains("geldautomat")
-                        || text.contains("atm")
-        ) {
-            categoryName = "Bargeld";
-        } else {
-            categoryName = "Sonstiges";
-        }
+        String categoryName = RULES.stream()
+                .filter(rule -> rule.matches(text, amount))
+                .map(CategoryRule::getCategoryName)
+                .findFirst()
+                .orElse(type == CategoryType.EINNAHME ? "Einkommen" : "Sonstiges");
 
         return categoryRepository
                 .findByUserAndNameIgnoreCaseAndType(user, categoryName, type)

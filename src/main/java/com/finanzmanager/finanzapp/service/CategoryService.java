@@ -20,6 +20,11 @@ public class CategoryService {
     private final UserRepository userRepository;
 
     private static final List<CategoryRule> RULES = List.of(
+            new CategoryRule("Fixkosten", CategoryType.AUSGABE, List.of(
+                    "lastschrift",
+                    "folgelastschrift",
+                    "sepa"
+            )),
             new CategoryRule("Lebensmittel", CategoryType.AUSGABE, List.of(
                     "rewe", "aldi", "lidl", "edeka", "netto", "penny",
                     "kaufland", "supermarkt", "dm", "rossmann"
@@ -59,27 +64,35 @@ public class CategoryService {
                     "bargeldauszahlung", "geldautomat", "atm"
             )),
 
-            new CategoryRule("Einkommen", CategoryType.EINNAHME, List.of(
-                    "gehalt", "lohn", "salary", "echtzeit-gutschrift",
-                    "gutschrift", "überweisung", "ueberweisung"
-            )),
             new CategoryRule("Finanzen", CategoryType.AUSGABE, List.of(
                     "kreditkarte",
                     "kreditkartenabrechnung",
                     "eigene kreditkartenabrechn",
                     "bankgebühr",
-                    "entgeltabschluss"
+                    "entgeltabschluss",
+                    "abschluss"
             )),
-            new CategoryRule("Alltag", CategoryType.AUSGABE, List.of(
-                    "kartenzahlung",
-                    "zahlung",
-                    "pos"
-            )),
+
             new CategoryRule("Transfers", CategoryType.AUSGABE, List.of(
-                    "überweisung",
-                    "ueberweisung",
                     "online-ueberweisung",
-                    "sepa"
+                    "online-überweisung",
+                    "ueberweisung",
+                    "überweisung",
+                    "sepa",
+                    "lastschrift",
+                    "folgelastschrift"
+            )),
+
+            new CategoryRule("Alltag", CategoryType.AUSGABE, List.of(
+                    "kartenzahlung"
+            )),
+
+            new CategoryRule("Einkommen", CategoryType.EINNAHME, List.of(
+                    "gehalt", "lohn", "salary", "echtzeit-gutschrift",
+                    "gutschrift"
+            )),
+            new CategoryRule("Freizeit", CategoryType.AUSGABE, List.of(
+                    "kino", "restaurant", "cafe", "bar", "mcdonald", "burger king"
             ))
     );
 

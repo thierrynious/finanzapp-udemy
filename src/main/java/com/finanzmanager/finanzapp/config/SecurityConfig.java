@@ -28,12 +28,18 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .cors(cors -> {})
+                .cors(cors -> {
+                })
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/api/users").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
+
+                        .requestMatchers("/api/categories/**").authenticated()
+                        .requestMatchers("/api/transactions/**").authenticated()
+                        .requestMatchers("/api/upload/**").authenticated()
+
                         .anyRequest().authenticated()
                 )
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))

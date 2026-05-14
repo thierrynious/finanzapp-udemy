@@ -75,8 +75,25 @@ public class TransactionController {
     }
 
     @GetMapping("/dashboard")
-    public ResponseEntity<Map<String, Object>> getDashboard() {
+    public ResponseEntity<Map<String, Object>> getDashboard(
+            @RequestParam(required = false) Integer month,
+            @RequestParam(required = false) Integer year
+    ) {
         List<Transaction> transactions = service.getAll();
+
+        if (year != null) {
+            transactions = transactions.stream()
+                    .filter(tx -> tx.getDate() != null)
+                    .filter(tx -> tx.getDate().getYear() == year)
+                    .toList();
+        }
+
+        if (month != null) {
+            transactions = transactions.stream()
+                    .filter(tx -> tx.getDate() != null)
+                    .filter(tx -> tx.getDate().getMonthValue() == month)
+                    .toList();
+        }
 
         double totalIncome = transactions.stream()
                 .filter(Transaction::isIncome)
@@ -89,6 +106,20 @@ public class TransactionController {
                 .sum();
 
         double balance = totalIncome - totalExpenses;
+
+        long transactionCount = transactions.size();
+
+        double biggestExpense = transactions.stream()
+                .filter(tx -> !tx.isIncome())
+                .mapToDouble(tx -> Math.abs(tx.getAmount()))
+                .max()
+                .orElse(0.0);
+
+        double biggestIncome = transactions.stream()
+                .filter(Transaction::isIncome)
+                .mapToDouble(Transaction::getAmount)
+                .max()
+                .orElse(0.0);
 
         Map<String, Double> categoryStats = transactions.stream()
                 .filter(tx -> !tx.isIncome())
@@ -114,11 +145,15 @@ public class TransactionController {
         dashboard.put("balance", balance);
         dashboard.put("totalIncome", totalIncome);
         dashboard.put("totalExpenses", totalExpenses);
+        dashboard.put("transactionCount", transactionCount);
+        dashboard.put("biggestExpense", biggestExpense);
+        dashboard.put("biggestIncome", biggestIncome);
         dashboard.put("categoryStats", categoryStats);
         dashboard.put("latestTransactions", latestTransactions);
 
         return ResponseEntity.ok(dashboard);
     }
+
 
     @GetMapping("/{id}")
     public TransactionDTO getById(@PathVariable long id) {

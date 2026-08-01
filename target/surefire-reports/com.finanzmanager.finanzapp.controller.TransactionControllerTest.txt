@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.finanzmanager.finanzapp.controller.TransactionControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.928 s -- in com.finanzmanager.finanzapp.controller.TransactionControllerTest

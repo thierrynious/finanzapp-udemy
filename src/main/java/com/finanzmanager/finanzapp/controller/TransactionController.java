@@ -38,7 +38,10 @@ public class TransactionController {
         Pageable pageable = PageRequest.of(
                 page,
                 size,
-                Sort.by(Sort.Order.desc("date"), Sort.Order.desc("id"))
+                Sort.by(
+                        Sort.Order.desc("date"),
+                        Sort.Order.desc("id")
+                )
         );
 
         Page<TransactionDTO> result = service
@@ -49,12 +52,22 @@ public class TransactionController {
     }
 
     @PostMapping
-    public ResponseEntity<TransactionDTO> createTransaction(@Valid @RequestBody TransactionDTO dto) {
+    public ResponseEntity<TransactionDTO> createTransaction(
+            @Valid @RequestBody TransactionDTO dto
+    ) {
         Transaction entity = toEntity(dto);
-        Transaction saved = service.save(entity);
+
+        Transaction saved = service.save(
+                entity,
+                dto.getCategoryId()
+        );
 
         return ResponseEntity
-                .created(URI.create("/api/transactions/" + saved.getId()))
+                .created(
+                        URI.create(
+                                "/api/transactions/" + saved.getId()
+                        )
+                )
                 .body(toDTO(saved));
     }
 
@@ -64,12 +77,20 @@ public class TransactionController {
             @Valid @RequestBody TransactionDTO dto
     ) {
         Transaction entity = toEntity(dto);
-        Transaction updated = service.update(id, entity, dto.getCategoryId());
+
+        Transaction updated = service.update(
+                id,
+                entity,
+                dto.getCategoryId()
+        );
+
         return ResponseEntity.ok(toDTO(updated));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTransaction(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteTransaction(
+            @PathVariable Long id
+    ) {
         service.deleteById(id);
         return ResponseEntity.noContent().build();
     }
@@ -91,7 +112,9 @@ public class TransactionController {
         if (month != null) {
             transactions = transactions.stream()
                     .filter(tx -> tx.getDate() != null)
-                    .filter(tx -> tx.getDate().getMonthValue() == month)
+                    .filter(tx ->
+                            tx.getDate().getMonthValue() == month
+                    )
                     .toList();
         }
 
@@ -124,24 +147,38 @@ public class TransactionController {
         Map<String, Double> categoryStats = transactions.stream()
                 .filter(tx -> !tx.isIncome())
                 .filter(tx -> tx.getCategory() != null)
-                .collect(Collectors.groupingBy(
-                        tx -> tx.getCategory().getName(),
-                        Collectors.summingDouble(tx -> Math.abs(tx.getAmount()))
-                ));
+                .collect(
+                        Collectors.groupingBy(
+                                tx -> tx.getCategory().getName(),
+                                Collectors.summingDouble(
+                                        tx -> Math.abs(tx.getAmount())
+                                )
+                        )
+                );
 
-        List<TransactionDTO> latestTransactions = transactions.stream()
-                .sorted((a, b) -> {
-                    int cmp = b.getDate().compareTo(a.getDate());
-                    if (cmp == 0) {
-                        return Long.compare(b.getId(), a.getId());
-                    }
-                    return cmp;
-                })
-                .limit(5)
-                .map(this::toDTO)
-                .toList();
+        List<TransactionDTO> latestTransactions =
+                transactions.stream()
+                        .filter(tx -> tx.getDate() != null)
+                        .sorted((a, b) -> {
+                            int cmp =
+                                    b.getDate().compareTo(a.getDate());
 
-        Map<String, Object> dashboard = new LinkedHashMap<>();
+                            if (cmp == 0) {
+                                return Long.compare(
+                                        b.getId(),
+                                        a.getId()
+                                );
+                            }
+
+                            return cmp;
+                        })
+                        .limit(5)
+                        .map(this::toDTO)
+                        .toList();
+
+        Map<String, Object> dashboard =
+                new LinkedHashMap<>();
+
         dashboard.put("balance", balance);
         dashboard.put("totalIncome", totalIncome);
         dashboard.put("totalExpenses", totalExpenses);
@@ -149,19 +186,24 @@ public class TransactionController {
         dashboard.put("biggestExpense", biggestExpense);
         dashboard.put("biggestIncome", biggestIncome);
         dashboard.put("categoryStats", categoryStats);
-        dashboard.put("latestTransactions", latestTransactions);
+        dashboard.put(
+                "latestTransactions",
+                latestTransactions
+        );
 
         return ResponseEntity.ok(dashboard);
     }
 
-
     @GetMapping("/{id}")
-    public TransactionDTO getById(@PathVariable long id) {
+    public TransactionDTO getById(
+            @PathVariable long id
+    ) {
         return toDTO(service.getById(id));
     }
 
     private TransactionDTO toDTO(Transaction tx) {
         TransactionDTO dto = new TransactionDTO();
+
         dto.setId(tx.getId());
         dto.setTitle(tx.getTitle());
         dto.setAmount(Math.abs(tx.getAmount()));
@@ -169,9 +211,15 @@ public class TransactionController {
         dto.setIncome(tx.isIncome());
 
         if (tx.getCategory() != null) {
-            dto.setCategoryId(tx.getCategory().getId());
-            dto.setCategory(tx.getCategory().getName());
+            dto.setCategoryId(
+                    tx.getCategory().getId()
+            );
+
+            dto.setCategory(
+                    tx.getCategory().getName()
+            );
         } else {
+            dto.setCategoryId(null);
             dto.setCategory("Unbekannt");
         }
 

@@ -29,11 +29,11 @@ public class UserService {
     public User register(@Valid User user) {
 
         if (userRepository.existsByEmail(user.getEmail())) {
-            throw new RuntimeException("Diese E-Mail ist bereits vergeben.");
+            throw new RuntimeException("cette E-mail est deja occupé.");
         }
 
         if (userRepository.existsByUsername(user.getUsername())) {
-            throw new RuntimeException("Dieser Username ist bereits vergeben.");
+            throw new RuntimeException("Ce user est deja occupé.");
         }
 
         user.setEmail(user.getEmail().trim().toLowerCase());

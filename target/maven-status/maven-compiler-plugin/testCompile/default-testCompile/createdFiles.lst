@@ -1,0 +1,4 @@
+com\finanzmanager\finanzapp\repository\TransactionRepositoryTest.class
+com\finanzmanager\finanzapp\service\TransactionServiceTest.class
+com\finanzmanager\finanzapp\FinanzappApplicationTests.class
+com\finanzmanager\finanzapp\controller\TransactionControllerTest.class

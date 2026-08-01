@@ -1,19 +1,25 @@
 package com.finanzmanager.finanzapp.service;
 
+import com.finanzmanager.finanzapp.config.AppProperties;
 import com.finanzmanager.finanzapp.model.Transaction;
+import com.finanzmanager.finanzapp.model.User;
+import com.finanzmanager.finanzapp.repository.CategoryRepository;
 import com.finanzmanager.finanzapp.repository.TransactionRepository;
+import com.finanzmanager.finanzapp.service.security.CurrentUserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -23,44 +29,132 @@ class TransactionServiceTest {
     @Mock
     private TransactionRepository transactionRepository;
 
+    @Mock
+    private CategoryRepository categoryRepository;
+
+    @Mock
+    private AppProperties appProperties;
+
+    @Mock
+    private CurrentUserService currentUserService;
+
     @InjectMocks
     private TransactionService transactionService;
 
     @Test
-    void should_return_all_transactions() {
+    void shouldReturnAllTransactionsForCurrentUser() {
 
-        //Given
-        List<Transaction> dummy = List.of(
-          new Transaction("Miete", 1200.0, LocalDate.now()),
-          new Transaction("Gehalt", 2500.0, LocalDate.now())
+        // given
+        User currentUser = createUser();
+
+        Transaction rent = new Transaction(
+                "Miete",
+                -1200.0,
+                LocalDate.now()
         );
-        when(transactionRepository.findAll()).thenReturn(dummy);
+        rent.setUser(currentUser);
 
-        //When
+        Transaction salary = new Transaction(
+                "Gehalt",
+                2500.0,
+                LocalDate.now()
+        );
+        salary.setUser(currentUser);
+
+        List<Transaction> transactions = List.of(
+                rent,
+                salary
+        );
+
+        when(currentUserService.getCurrentUser())
+                .thenReturn(currentUser);
+
+        when(transactionRepository.findFilteredByUser(
+                currentUser,
+                null,
+                null,
+                null,
+                Pageable.unpaged()
+        )).thenReturn(new PageImpl<>(transactions));
+
+        // when
         List<Transaction> result = transactionService.getAll();
 
-        //Then
+        // then
         assertThat(result).hasSize(2);
-        verify(transactionRepository).findAll();
+
+        assertThat(result)
+                .extracting(Transaction::getTitle)
+                .containsExactly("Miete", "Gehalt");
+
+        verify(currentUserService).getCurrentUser();
+
+        verify(transactionRepository).findFilteredByUser(
+                currentUser,
+                null,
+                null,
+                null,
+                Pageable.unpaged()
+        );
     }
 
     @Test
-    void should_save_transaction_with_timestamp() {
+    void shouldSaveTransactionForCurrentUser() {
 
-        //given
-        Transaction tx = new Transaction("Test", 99.99, LocalDate.now());
+        // given
+        User currentUser = createUser();
+
+        Transaction transaction = new Transaction(
+                "Test",
+                -99.99,
+                LocalDate.now()
+        );
+
+        when(currentUserService.getCurrentUser())
+                .thenReturn(currentUser);
+
+        when(transactionRepository.save(any(Transaction.class)))
+                .thenAnswer(invocation -> invocation.getArgument(0));
 
         // when
-        transactionService.save(tx);
+        Transaction result = transactionService.save(transaction);
 
-        //then
-        ArgumentCaptor<Transaction> captor = ArgumentCaptor.forClass(Transaction.class);
+        // then
+        ArgumentCaptor<Transaction> captor =
+                ArgumentCaptor.forClass(Transaction.class);
+
         verify(transactionRepository).save(captor.capture());
 
-        Transaction saved = captor.getValue();
+        Transaction savedTransaction = captor.getValue();
 
-        assertThat(saved.getTitle()).isEqualTo("Test");
-        assertThat(saved.getAmount()).isEqualTo(99.99);
-        assertThat(saved.getDate()).isNotNull();
+        assertThat(savedTransaction.getTitle())
+                .isEqualTo("Test");
+
+        assertThat(savedTransaction.getAmount())
+                .isEqualTo(-99.99);
+
+        assertThat(savedTransaction.getDate())
+                .isEqualTo(LocalDate.now());
+
+        assertThat(savedTransaction.getUser())
+                .isSameAs(currentUser);
+
+        assertThat(savedTransaction.isIncome())
+                .isFalse();
+
+        assertThat(result)
+                .isSameAs(savedTransaction);
+
+        verify(currentUserService).getCurrentUser();
+    }
+
+    private User createUser() {
+        return User.builder()
+                .id(1L)
+                .username("testuser")
+                .email("testuser@test.de")
+                .password("Password123!")
+                .isActive(true)
+                .build();
     }
 }

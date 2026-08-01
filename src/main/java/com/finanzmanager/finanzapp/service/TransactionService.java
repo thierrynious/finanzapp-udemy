@@ -14,13 +14,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class TransactionService {
 
-    private static final Logger log = LoggerFactory.getLogger(TransactionService.class);
+    private static final Logger log =
+            LoggerFactory.getLogger(TransactionService.class);
 
     private final TransactionRepository repository;
     private final CategoryRepository categoryRepository;
@@ -41,14 +44,19 @@ public class TransactionService {
 
     @PostConstruct
     public void init() {
-        log.info("{} gestartet | Max. Transaktionen: {} | Währung: {}",
+        log.info(
+                "{} gestartet | Max. Transaktionen: {} | Währung: {}",
                 appProperties.getName(),
                 appProperties.getMaxTransactions(),
-                appProperties.getDefaultCurrency());
+                appProperties.getDefaultCurrency()
+        );
     }
 
+    @Transactional(readOnly = true)
     public List<Transaction> getAll() {
-        User currentUser = currentUserService.getCurrentUser();
+        User currentUser =
+                currentUserService.getCurrentUser();
+
         return repository.findFilteredByUser(
                 currentUser,
                 null,
@@ -58,14 +66,20 @@ public class TransactionService {
         ).getContent();
     }
 
+    @Transactional(readOnly = true)
     public Page<Transaction> getFilteredPaged(
             String search,
             Boolean income,
             Long categoryId,
             Pageable pageable
     ) {
-        User currentUser = currentUserService.getCurrentUser();
-        String normalizedSearch = (search == null || search.isBlank()) ? null : search.trim();
+        User currentUser =
+                currentUserService.getCurrentUser();
+
+        String normalizedSearch =
+                search == null || search.isBlank()
+                        ? null
+                        : search.trim();
 
         return repository.findFilteredByUser(
                 currentUser,
@@ -76,44 +90,95 @@ public class TransactionService {
         );
     }
 
-    public Transaction save(Transaction transaction) {
-        User currentUser = currentUserService.getCurrentUser();
+    public Transaction save(
+            Transaction transaction,
+            Long categoryId
+    ) {
+        User currentUser =
+                currentUserService.getCurrentUser();
+
         transaction.setUser(currentUser);
+
+        Category category = findCategory(
+                categoryId,
+                currentUser
+        );
+
+        transaction.setCategory(category);
+
         return repository.save(transaction);
     }
 
-    public Transaction update(Long id, Transaction updatedTransaction, Long categoryId) {
+    public Transaction update(
+            Long id,
+            Transaction updatedTransaction,
+            Long categoryId
+    ) {
         Transaction existing = getById(id);
-        User currentUser = currentUserService.getCurrentUser();
 
-        existing.setTitle(updatedTransaction.getTitle());
-        existing.setAmount(updatedTransaction.getAmount());
-        existing.setDate(updatedTransaction.getDate());
+        User currentUser =
+                currentUserService.getCurrentUser();
 
-        if (categoryId != null) {
-            Category category = categoryRepository.findByIdAndUser(categoryId, currentUser)
-                    .orElseThrow(() -> new RuntimeException("Kategorie nicht gefunden"));
-            existing.setCategory(category);
-        }
+        existing.setTitle(
+                updatedTransaction.getTitle()
+        );
+
+        existing.setAmount(
+                updatedTransaction.getAmount()
+        );
+
+        existing.setDate(
+                updatedTransaction.getDate()
+        );
+
+        Category category = findCategory(
+                categoryId,
+                currentUser
+        );
+
+        existing.setCategory(category);
 
         return repository.save(existing);
     }
 
+    @Transactional(readOnly = true)
     public Transaction getById(Long id) {
-        User currentUser = currentUserService.getCurrentUser();
+        User currentUser =
+                currentUserService.getCurrentUser();
 
-        Transaction tx = repository.findById(id)
-                .orElseThrow(() -> new TransactionNotFoundException(id));
-
-        if (!tx.getUser().getId().equals(currentUser.getId())) {
-            throw new TransactionNotFoundException(id);
-        }
-
-        return tx;
+        return repository.findByIdAndUser(
+                        id,
+                        currentUser
+                )
+                .orElseThrow(
+                        () ->
+                                new TransactionNotFoundException(id)
+                );
     }
 
     public void deleteById(Long id) {
-        Transaction tx = getById(id);
-        repository.delete(tx);
+        Transaction transaction = getById(id);
+        repository.delete(transaction);
+    }
+
+    private Category findCategory(
+            Long categoryId,
+            User currentUser
+    ) {
+        if (categoryId == null) {
+            return null;
+        }
+
+        return categoryRepository
+                .findByIdAndUser(
+                        categoryId,
+                        currentUser
+                )
+                .orElseThrow(
+                        () ->
+                                new RuntimeException(
+                                        "Kategorie nicht gefunden"
+                                )
+                );
     }
 }
